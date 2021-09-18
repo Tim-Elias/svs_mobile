@@ -1,0 +1,39 @@
+.header_mobile{
+    padding: 12px 0 3px 0;
+    border-bottom: 3px #E87B1A solid;
+    text-align: center;
+}
+
+.header_mobile_button {
+    float: right;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+}
+
+.header_mobile_logo {
+    height: 40px;
+    cursor: pointer;
+}
+
+.burger_menu {
+    width: 25px;
+    position: absolute;
+    left: 30px;
+    top: 40%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.blue_arrow {
+    width: 25px;
+    position: absolute;
+    left: 30px;
+    top: 40%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
