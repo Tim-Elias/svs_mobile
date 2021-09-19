@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import MHeader from './m_header';
 import MMenu from './m_menu';
 // import './mobile.css';
-// import MStorage from './m_storage';
+import MStorage from './m_storage';
 import Wait from '../m_screen/wait';
-// import MSetting from './m_setting';
-// import MDisp from './m_disp';
+import MSetting from './m_setting';
+import MDisp from './m_disp';
 // import MDelivered from './m_delivered';
 // import MNotDelivered from './m_not_delivered';
 // import MStorageReciept from './m_storage_reciept';
@@ -59,10 +59,10 @@ class Screen extends React.Component {
 
             <div>
                 <MHeader />
-                {/* {this.props.store.general.active_window === 'm_storage' ? (<MStorage />) : (null)} */}
+                {this.props.store.general.active_window === 'm_storage' ? (<MStorage />) : (null)}
                 {this.props.store.general.active_window === 'Mmenu' ? (<MMenu />) : (null)}
-                {/* {this.props.store.general.active_window === 'm_disp' ? (<MDisp />) : (null)}
-                {this.props.store.general.active_window === 'm_disp_template' ? (<MDispTemplate />) : (null)}
+                {this.props.store.general.active_window === 'm_disp' ? (<MDisp />) : (null)}
+                {/* {this.props.store.general.active_window === 'm_disp_template' ? (<MDispTemplate />) : (null)}
                 {this.props.store.general.active_window === 'm_delivered' ? (<MDelivered />) : (null)}
                 {this.props.store.general.active_window === 'm_not_delivered' ? (<MNotDelivered />) : (null)}
                 {this.props.store.general.active_window === 'storage_reciept' ? (<MStorageReciept />) : (null)}
@@ -73,9 +73,9 @@ class Screen extends React.Component {
                 {this.props.store.general.active_window === 'm_manifest' ? (<MManifest />) : (null)}
                 {this.props.store.general.active_window === 'm_finance' ? (<MFinance />) : (null)}
                 {this.props.store.general.active_window === 'm_movement' ? (<MMovement />) : (null)}
-                {this.props.store.general.active_window === 'm_bounty' ? (<MBounty />) : (null)}
+                {this.props.store.general.active_window === 'm_bounty' ? (<MBounty />) : (null)} */}
                 {this.props.store.general.active_window === 'setting' ? (<MSetting />) : (null)}
-                {this.props.store.general.active_window === 'm_calc_price' ? (<MCalcPrice />) : (null)} */}
+                {/* {this.props.store.general.active_window === 'm_calc_price' ? (<MCalcPrice />) : (null)} */}
                 {this.props.store.general.active_window === 'wait' ? (<Wait />) : (null)}
                 {/* {this.props.store.general.active_window === 'm_check_print' ? (<MCheckPrint />) : (null)}
                 {this.props.store.general.active_window === 'scanner' ? (<MScanner />) : (null)}

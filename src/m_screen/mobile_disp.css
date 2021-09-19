@@ -1,0 +1,109 @@
+.mobile_disp_address_data {
+    display: flex;
+    flex-direction: column;
+}
+
+.disp_address_data_header--green {
+    color:green;
+}
+
+.mobile_disp_address_data_el {
+    display: flex;
+    flex-direction: column;
+}
+
+.cargo_item {
+    border-bottom: #c0c0c0 solid 1px;
+    margin: 10px 0 10px 0;
+    font-size: 16px;
+    position: relative;
+}
+.cargo_item:last-child {
+    margin: 0;
+    border: 0;
+}
+
+.mobile_disp_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 15px 10px 15px;
+}
+
+.mobile_disp_button_item {
+    background-color: rgb(95, 187, 95);
+    padding: 10px 20px;
+    border: 0;
+    width: 47%;
+    color: black;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em rgb(122, 122, 122);
+}
+.mobile_disp_button_item:active {
+    box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+
+.mobile_disp_button_item--nonactive {
+    background-color: rgb(203, 221, 203);
+    padding: 10px 20px;
+    border: 0;
+    width: 47%;
+}
+
+.mobile_disp_button_item--not {
+    background-color: rgb(219, 44, 44);
+}
+
+.mobile_disp_button_item--yellow {
+    background-color: rgb(255, 187, 0);
+    padding: 10px 5px;
+}
+
+.mobile_disp_button_item--blue {
+    background-color: rgb(123, 191, 255);
+    width: 100%;
+}
+
+.mobile_disp_button_item--blue_nonactive {
+    background-color: rgb(206, 232, 255);
+    width: 100%;
+    color: gray;
+    box-shadow: none;
+}
+
+.mobile_disp_button_item--full {
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+    border: 0;
+    width: 100%;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em rgb(122, 122, 122);
+}
+.mobile_disp_button_item--full:active {
+    box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+
+.mobile_disp_customer_data {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin: 5px;
+}
+
+.mobile_disp_input {
+    margin: 3px 0 15px 0;
+    font-size: 15px;
+    border: 0;
+    border-bottom: #c0c0c0 solid 1px;
+}
+
+.mobile_disp_data_label {
+    margin: 3px 5px 15px 0;
+    border: 0;
+    border-bottom: #c0c0c0 solid 1px;
+    font-size: 15px;
+}
+
+.mobile_disp_data_el {
+    font-size: 15px;
+    margin: 3px 5px 15px 0;
+    border-bottom: #c0c0c0 solid 1px;
+    word-break: break-all;
+}

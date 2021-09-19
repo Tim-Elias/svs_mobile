@@ -6,7 +6,7 @@ class Screen extends React.Component {
     return (
 
       <div className='preloader'>
-        <div className='preloader__image_animate' />
+        Ожидание ...
       </div>
 
     )

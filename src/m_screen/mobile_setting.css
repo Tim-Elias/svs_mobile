@@ -1,0 +1,28 @@
+.mobile_setting_general {
+    margin: 20px 10px 0 10px;
+}
+
+.mobile_setting_label {
+    font-size: 16px;
+    margin: 0 10px 0 0;
+    border-bottom: 1px black solid;
+    width: 150px;
+}
+
+.mobile_setting_el {
+    font-size: 14px;
+    width: auto;
+    border-bottom: 1px black solid;
+    width: 100%;
+}
+
+.mobile_setting_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+.setting_general_data {
+    grid-template-columns: 150px auto;
+}

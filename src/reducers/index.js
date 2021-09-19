@@ -2,8 +2,8 @@ import { combineReducers } from 'redux'
 
 import login from './login'
 import general from './general'
-// import storage from './storage'
-// import disp from './disp'
+import storage from './storage'
+import disp from './disp'
 // import get_manifest from './get_manifest'
 // import manifest from './manifest'
 // import reciept from './reciept'
@@ -27,6 +27,8 @@ import general from './general'
 export default combineReducers({
 
   login,
-  general
+  general,
+  storage,
+  disp
   
 })
