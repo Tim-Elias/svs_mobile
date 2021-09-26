@@ -20,7 +20,7 @@ class Screen extends React.Component {
 
         const data = {
             userkey: this.props.store.login.userkey,
-            status: disp.Type,
+            status: "",
             num: disp.Number,
         };
 

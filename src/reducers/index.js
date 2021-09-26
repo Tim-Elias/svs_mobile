@@ -6,7 +6,7 @@ import storage from './storage'
 import disp from './disp'
 // import get_manifest from './get_manifest'
 // import manifest from './manifest'
-// import reciept from './reciept'
+import reciept from './reciept'
 // import send_manifest from './send_manifest'
 // import mutual from './mutual'
 // import create_disp from './create_disp'
@@ -29,6 +29,7 @@ export default combineReducers({
   login,
   general,
   storage,
-  disp
+  disp,
+  reciept
   
 })

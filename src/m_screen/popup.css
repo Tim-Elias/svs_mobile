@@ -1,0 +1,118 @@
+.PopUp_container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.PopUp_window {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 51;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 15px;
+    width: 300px;
+    min-height: 200px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.PopUp_window_template {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0%);
+    padding: 5px;
+    z-index: 51;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    width: 310px;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.PopUp_date {
+    text-align: start;
+    margin: 0 20px;
+}
+
+.PopUp_date_item {
+    margin: 20px 0;
+}
+
+.PopUp_button_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.PopUp_button {
+    width: 80px;
+}
+.PopUp_button_check {
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+
+.PopUp_table {
+    padding: 5px;
+    border-radius: 3px;
+    border: 3px solid #727272;
+    margin: 10px 0 10px 0;
+}
+
+.PopUp_table_header {
+    position: relative;
+    font-size: 15px;
+    background-color: #F0F0F0;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 3px solid #727272;
+    border-bottom: none;
+    margin: -8px -8px 10px -8px;
+}
+
+.PopUp_table_row {
+    display: flex;
+    margin: 0 0 5px 0;
+}
+
+.PopUp_table_label {
+    width: 100px;
+    margin: 0 5px 0 0;
+    border: 0;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-bottom: #c0c0c0 solid 1px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.PopUp_table_el {
+    font-size: 15px;
+    border: 0;
+    border-bottom: #c0c0c0 solid 1px;
+    word-wrap: break-word;
+    width: calc(100% - 105px);
+    text-align: left;
+}

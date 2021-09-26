@@ -1,0 +1,35 @@
+.mobile_del_row select {
+    font-size: 12px;
+    width: calc(100% - 150px);
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    text-align: left;
+}
+
+.mobile_del_data_label {
+    margin: 0 5px 0 0;
+    border: 0;
+    border-bottom: #c0c0c0 solid 1px;
+    font-size: 14px;
+    width: 150px;
+}
+
+.mobile_del_input {
+    font-size: 14px;
+    border: 0;
+    border-bottom: #c0c0c0 solid 1px;
+    /* width: calc(100% - 150px); */
+    flex-grow: 100;
+    background-color: white;
+    appearance: none;
+}
+
+.mobile_del_row {
+    display: flex;
+    margin: 0 0 13px 0;
+}
+.mobile_del_row:first-child {
+    margin-top: 10px;
+}
+.mobile_del_row:last-child {
+    margin-top: 18px;
+}

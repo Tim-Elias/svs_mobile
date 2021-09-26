@@ -12,6 +12,32 @@ class Screen extends React.Component {
         this.props.set_active_window(window);
     }
 
+
+    reciept = () => {
+        this.props.set_active_window("wait");
+       
+        const data = {
+            userkey: this.props.store.login.userkey,
+            num: this.props.store.disp.data.Number,
+            date: this.props.store.disp.delivery_date,
+            time: this.props.store.disp.delivery_time,
+            
+        }
+        get_data('getdispatch', data).then(
+            (result) => {
+                this.props.set_popup_message(`Накладная ${this.props.store.disp.data.Number} успешно принята`);
+                this.props.set_active_window("m_reciept");
+            },
+            (err) => {
+                this.props.set_popup_message("Не удалось принять накладную");
+                this.props.set_active_window("m_reciept");
+                console.log(err)
+            }
+        );
+
+    }
+
+
     loadData = (num = this.props.store.disp.key.num, status = this.props.store.disp.key.status) => {
         this.props.cookies.set('window', 'm_disp', { maxAge: 1000000000000 })
         this.props.cookies.set('num', num, { maxAge: 1000000000000 })
@@ -34,7 +60,13 @@ class Screen extends React.Component {
             (err) => {
                 console.log(err)
                 // alert(err)
-                this.settings_window("m_storage");
+                this.props.set_popup_message(err);
+                if(this.props.store.disp.key.status = "НаСкладе") {
+                    this.settings_window("m_reciept");
+                } else {
+                    this.settings_window("m_storage");
+                }
+                
             }
         );
     } 
@@ -177,12 +209,15 @@ class Screen extends React.Component {
 
                     
 
-                    {/* {this.props.store.disp.key.status === "Ожидается" ? (
+                    {this.props.store.disp.key.status === "НаСкладе" ? (
                         <div className="mobile_disp_button">
-                            <button className="mobile_disp_button_item mobile_disp_button_item--full" onClick={this.settings_window.bind(this, "m_receiv_from_sender")}>Получить от отправителя</button>
+                            <button className="mobile_disp_button_item mobile_disp_button_item--full" onClick={this.reciept.bind(this)}>Получить со склада</button>
                         </div>
-                    ) : (
-                        <div>
+                    ) : (<div className="mobile_disp_button">
+                    <button className="mobile_disp_button_item" onClick={this.settings_window.bind(this, 'm_delivered')}>Доставлено</button>
+                    <button className="mobile_disp_button_item--not mobile_disp_button_item" onClick={this.settings_window.bind(this, 'm_not_delivered')}>Не доставлено</button>
+                </div>)}
+                        {/* <div>
                             {this.props.store.disp.data.Type === 'Заявка' && this.props.store.disp.data.Status === 'Подтверждено' ?
                             (<div className="mobile_disp_button">
                                 <button className="mobile_disp_button_item mobile_disp_button_item--full" onClick={this.setorderstatus.bind(this, "Выполнено")}>Выполнено</button>
@@ -205,16 +240,10 @@ class Screen extends React.Component {
                                 </div>)
                             : (null)}
 
-                            {this.props.store.disp.data.Type === 'Доставка' ? (*/}
-                                
-                                    <div className="mobile_disp_button">
-                                    <button className="mobile_disp_button_item" onClick={this.settings_window.bind(this, 'm_delivered')}>Доставлено</button>
-                                    <button className="mobile_disp_button_item--not mobile_disp_button_item" onClick={this.settings_window.bind(this, 'm_not_delivered')}>Не доставлено</button>
-                                </div>
-                                {/* )
+                            {this.props.store.disp.data.Type === 'Доставка' ? ( )
                              : (null)}
                          </div>
-                     )} */}
+                     )}  */}
 
                     <div className="disp_customer_data">
                         <div className="mobile_disp_data_label">Заказчик:</div>

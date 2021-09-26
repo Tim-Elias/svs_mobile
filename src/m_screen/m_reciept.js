@@ -1,5 +1,5 @@
 import React from 'react';
-import '../screen/reciept.css';
+import './reciept.css';
 import { connect } from 'react-redux';
 import Scanner from "./scanner";
 import scanner from '../common/scanner.png';
@@ -11,7 +11,7 @@ class Screen extends React.Component {
 
         const data = {
             userkey: this.props.store.login.userkey,
-            status: "Ожидается",
+            status: "НаСкладе",
             num: this.props.store.reciept.search,
         };
 
@@ -31,7 +31,7 @@ class Screen extends React.Component {
         return (
             <div>
                 <div className="mobile_heading">
-                    Получить от отправителя
+                    Получить на складе
                 </div>
                 <div className="mobile_container">
                     <div className="search_reciept">

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './mobile.css';
 import { get_data } from '../common/common_modules';
 import './mobile_disp.css';
-import Foto from './foto';
+// import Foto from './foto';
 import { withCookies } from 'react-cookie';
 import MFoto from './m_foto';
 
