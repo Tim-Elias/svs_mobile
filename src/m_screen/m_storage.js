@@ -4,10 +4,10 @@ import './mobile.css';
 import './mobile_storage.css';
 import { get_data } from '../common/common_modules';
 import update from '../common/update.png';
-import scanner from '../common/scanner.png';
+// import scanner from '../common/scanner.png';
 import { withCookies } from 'react-cookie';
 import Wait from "./wait";
-import Scanner from "./scanner";
+// import Scanner from "./scanner";
 // const socket = new WebSocket('wss://echo.websocket.org');
 
 class Screen extends React.Component {
@@ -146,12 +146,12 @@ class Screen extends React.Component {
                             </div>
                             <input className="mobile_search_input" value={this.props.store.storage.search} onChange={(e) => { this.props.set_search_storagre(e.target.value) }} />
                             <img src={update} className="update" onClick={this.update.bind(this)} />
-                            <img src={scanner} className="update" onClick={e => this.props.set_scann_active(!this.props.store.storage.scann_active)} />
+                            {/* <img src={scanner} className="update" onClick={e => this.props.set_scann_active(!this.props.store.storage.scann_active)} /> */}
                         </div>
 
-                        {this.props.store.storage.scann_active ? (
+                        {/* {this.props.store.storage.scann_active ? (
                             <Scanner />
-                        ) : (null)}
+                        ) : (null)} */}
 
                         {this.props.store.storage.list.filter((el) => {
                             const filter_num = el.Number.toUpperCase()

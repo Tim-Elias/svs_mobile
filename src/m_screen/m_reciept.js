@@ -1,8 +1,8 @@
 import React from 'react';
 import './reciept.css';
 import { connect } from 'react-redux';
-import Scanner from "./scanner";
-import scanner from '../common/scanner.png';
+// import Scanner from "./scanner";
+// import scanner from '../common/scanner.png';
 
 class Screen extends React.Component {
 
@@ -51,11 +51,11 @@ class Screen extends React.Component {
                     <div className="search_reciept">
                         <div className="search_reciept_label">Поиск по номеру:</div>
                         <div className="search_reciept_data"><input value={this.props.store.reciept.search} className="search_reciept_data_input" onChange={e => this.props.set_search_reciept(e.target.value)}></input></div>
-                        <img src={scanner} className="update" onClick={e => this.props.set_scann_active(!this.props.store.storage.scann_active)} alt="" />
+                        {/* <img src={scanner} className="update" onClick={e => this.props.set_scann_active(!this.props.store.storage.scann_active)} alt="" /> */}
                     </div>
-                    {this.props.store.storage.scann_active ? (
+                    {/* {this.props.store.storage.scann_active ? (
                         <Scanner />
-                    ) : (null)}
+                    ) : (null)} */}
                     <div className="search_reciept_button_area">
                         <button id="search_reciept_button" onClick={this.search_reciept.bind(this)} className="send_pod">Найти</button>
                     </div>
