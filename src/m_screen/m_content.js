@@ -26,6 +26,7 @@ import MReciept from './m_reciept';
 // import MReceiveFromSender from './m_receive_from_sender';
 // import MSendPartner from './m_send_partner';
 import PopUp from './popup';
+import './popup.css';
 import { withCookies } from 'react-cookie';
 
 class Screen extends React.Component {
