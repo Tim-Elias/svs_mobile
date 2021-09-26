@@ -27,7 +27,21 @@ class Screen extends React.Component {
     }
 
     render() {
-        
+        let strSearch = this.props.store.reciept.search
+        let fun_search_reciept = this.search_reciept
+        document.onkeydown = function (event) {
+
+            try {
+                if (event.keyCode === 13) {
+                    if ( strSearch !== "") {
+                        fun_search_reciept()
+                    }
+                }
+            } catch (e) {
+                console.log(e)
+            }
+        };
+
         return (
             <div>
                 <div className="mobile_heading">
