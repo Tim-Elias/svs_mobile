@@ -2,7 +2,7 @@ import axios from 'axios/index'
 
 const get_data = (url, data) => {
   return new Promise((resolve, reject) => {
-    axios.post(`http://82.200.49.118/ht/hs/app/${url}/post`,
+    axios.post(`http://5.59.125.35/ht/hs/app/${url}/post`,
       JSON.stringify(data),
       {
        
